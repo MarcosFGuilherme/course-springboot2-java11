@@ -13,14 +13,14 @@ import com.educandoweb.course.repositories.UserRepository;
 public class UserService {
 	
 	@Autowired
-	private UserRepository repossitory;
+	private UserRepository repository;
 	
 	public List<User> findAll(){
-		return repossitory.findAll();
+		return repository.findAll();
 	}
 	
 	public User findById(Long id) {
-		Optional<User> obj = repossitory.findById(id);
+		Optional<User> obj = repository.findById(id);
 		return obj.get();
 	}
 }

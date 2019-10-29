@@ -13,14 +13,14 @@ import com.educandoweb.course.repositories.OrderRepository;
 public class OrderService {
 	
 	@Autowired
-	private OrderRepository repossitory;
+	private OrderRepository repository;
 	
 	public List<Order> findAll(){
-		return repossitory.findAll();
+		return repository.findAll();
 	}
 	
 	public Order findById(Long id) {
-		Optional<Order> obj = repossitory.findById(id);
+		Optional<Order> obj = repository.findById(id);
 		return obj.get();
 	}
 }
