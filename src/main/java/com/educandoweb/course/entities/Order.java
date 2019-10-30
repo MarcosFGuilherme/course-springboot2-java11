@@ -1,5 +1,6 @@
 package com.educandoweb.course.entities;
 
+import java.io.Serializable;
 import java.time.Instant;
 import java.util.HashSet;
 import java.util.Set;
@@ -18,7 +19,7 @@ import com.fasterxml.jackson.annotation.JsonFormat;
 
 @Entity
 @Table(name="tb_order")
-public class Order {
+public class Order implements Serializable{
 	private static final long serialVersionUID = 1L;
 	
 	@Id
